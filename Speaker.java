@@ -1,56 +1,47 @@
 class Speaker
 {
-	public static boolean isConnected;
-	public static int currentVolume;
-	public static int maxVolume=5;
-	public static int minVolume;
-public static void onOrOff()
+	static int id=1;
+	static String brand="ZEBRONICS";
+	static String freq="20KHz";
+	static String type="Wall Mount";
+	static int price=15999;
+	static String color="Black";
+public static void main(String args[])
 {
-     if(isConnected)
-	 {
-	   isConnected=false;
-	   System.out.println("Speaker is turned Off");
-	   
-	 }
-	 else
-	 {
-	   isConnected=true;
-	   System.out.println("Speaker is turned On");
-     }
+	
+	String color="Black";
+	System.out.println("Id:"+id);
+	System.out.println("The brand name is:"+brand);
+	System.out.println("The frequency range is:"+freq);
+	System.out.println("The type is:"+type);
+	System.out.println("The price is:"+price);
+	System.out.println("The color is:"+color);
+	//reInit();
+	///*
+	id=2;
+	brand="Bose";
+	freq="25KHz";
+	type="Wall Mounted";
+	price=20000;
+	color="Silver";
+	//*/
+	System.out.println("\tReinitialized");
+	System.out.println("Id:"+id);
+	System.out.println("The brand name is:"+brand);
+	System.out.println("The frequency range is:"+freq);
+	System.out.println("The type is:"+type);
+	System.out.println("The price is:"+price);
+	System.out.println("The color is:"+color);
+	
+	
 }
-public static void increaseVolume()
+public static void reInit()
 {
-     if(isConnected)
-     {
-             if(currentVolume<maxVolume)
-             {
-	            currentVolume+=1;
-	            System.out.println("The current volume is "+currentVolume);
-             }
-             else{
-	             System.out.println("The volume is at its maximum level");
-             }
-      }
-     else{
-	         System.out.println("First connect the speaker");
-      }
+   	id=2;
+	brand="Bose";
+	freq="25KHz";
+	type="Wall Mounted";
+	price=20000;
+	color="Silver";
 }
-public static void decreaseVolume()
-{
-        if(isConnected)
-		{
-			if(currentVolume>minVolume)
-			{
-				currentVolume-=1;
-				System.out.println("The current volume is "+currentVolume);
-			}
-			else{
-				System.out.println("The Speaker is at its minimum volume");
-			}
-		}
-		else{
-			System.out.println("First Connect the Speaker");
-		}
-}
-
 }
