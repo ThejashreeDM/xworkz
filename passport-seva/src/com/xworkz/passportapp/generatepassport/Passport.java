@@ -79,7 +79,7 @@ public class Passport
             System.out.println("Invalid Email Please provide a valid emailId");
         }
 
-        if(dto.getIsEmailLoginSame()==true || dto.getIsEmailLoginSame()==false)
+        if(dto.getIsEmailLoginSame() || dto.getIsEmailLoginSame()==false)
         {
             isLoginSameAsEmailValid=true;
         }
