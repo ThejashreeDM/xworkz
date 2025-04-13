@@ -3,7 +3,8 @@ package com.xworkz.inheritancemodule.season;
 public class SummarRunner
 {
     public static void main(String[] args) {
-        Summar season=new Summar();
-        season.variations();
+        Season season=new Summar();
+        Summar summar=(Summar)season;
+        summar.variations();
     }
 }

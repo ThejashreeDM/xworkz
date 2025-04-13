@@ -4,7 +4,8 @@ public class DishWasherRunner
 {
     public  static void main(String args[])
     {
-        DishWasher type1=new DishWasher();
+        HomeAppliance dishWasher =new DishWasher();
+        DishWasher type1=(DishWasher)dishWasher;
         type1.doHouseHoldChores();
     }
 }

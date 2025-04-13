@@ -4,7 +4,8 @@ public class ChainRunner
 {
     public static void main(String args[])
     {
-        Chain type1=new Chain();
-        type1.wear();
+        Jewelry jewelry=new Chain();
+        Chain chain=(Chain)jewelry;
+        chain.wear();
     }
 }

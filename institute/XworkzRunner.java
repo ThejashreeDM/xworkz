@@ -3,7 +3,8 @@ package com.xworkz.inheritancemodule.institute;
 public class XworkzRunner
 {
     public static void main(String[] args) {
-        Xworkz institute=new Xworkz();
-        institute.provideService();
+        Institute institute=new Xworkz();
+        Xworkz xworkz=(Xworkz)institute;
+        xworkz.provideService();
     }
 }

@@ -5,8 +5,9 @@ public class IntelljIdeaRunner
     public static void main(String[] args)
     {
 
-        IntellijIdea ide=new IntellijIdea();
-        ide.developProject();
+        Ide ide=new IntellijIdea();
+        IntellijIdea intellijIdea=(IntellijIdea)ide;
+        intellijIdea.developProject();
 
     }
 }

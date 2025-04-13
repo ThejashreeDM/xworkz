@@ -4,8 +4,9 @@ public class GraniteRunner
 {
     public static void main(String args[])
     {
-        Granite type1=new Granite();
-        type1.makeSculpture();
+        Stone type1=new Granite();
+        Granite type=(Granite)type1;
+        type.makeSculpture();
 
     }
 }

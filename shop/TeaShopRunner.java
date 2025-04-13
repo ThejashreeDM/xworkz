@@ -4,7 +4,8 @@ public class TeaShopRunner
 {
     public static void main(String args[])
     {
-        TeaShop name1=new TeaShop();
-        name1.trading();
+        Shop type=new TeaShop();
+        TeaShop name=(TeaShop)type;
+        name.trading();
     }
 }

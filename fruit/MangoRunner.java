@@ -4,7 +4,8 @@ public class MangoRunner
 {
     public static void main(String args[])
     {
-        Mango type1=new Mango();
+        Fruit fruit=new Mango();
+        Mango type1=(Mango)fruit;
         type1.eat();
     }
 }

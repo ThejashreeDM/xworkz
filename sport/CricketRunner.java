@@ -3,7 +3,8 @@ package com.xworkz.inheritancemodule.sport;
 public class CricketRunner {
     public static void main(String args[])
     {
-        Cricket type1=new Cricket();
-        type1.exercise();
+        Sport type1=new Cricket();
+        Cricket cricket=(Cricket)type1;
+        cricket.exercise();
     }
 }

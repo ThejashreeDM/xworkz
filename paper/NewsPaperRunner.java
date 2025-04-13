@@ -4,7 +4,8 @@ public class NewsPaperRunner
 {
     public static void main(String args[])
     {
-        NewsPaper vijayaKarnataka=new NewsPaper();
+        Paper newsPapaer=new NewsPaper();
+        NewsPaper vijayaKarnataka=(NewsPaper)newsPapaer;
         vijayaKarnataka.read();
     }
 }

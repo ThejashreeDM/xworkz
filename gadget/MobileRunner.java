@@ -4,7 +4,8 @@ public class MobileRunner
 {
     public static void main(String args[])
     {
-        Mobile samsung=new Mobile();
+        Gadget gadget=new Mobile();
+        Mobile samsung=(Mobile)gadget;
         samsung.entertainment();
     }
 }

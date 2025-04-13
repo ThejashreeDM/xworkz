@@ -4,7 +4,8 @@ public class ShirtRunner
 {
     public static void main(String args[])
     {
-        Shirt raymond=new Shirt();
+        Cloth shirt=new Shirt();
+        Shirt raymond=(Shirt)shirt;
         raymond.wear();
     }
 }

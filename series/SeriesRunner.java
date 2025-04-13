@@ -4,7 +4,8 @@ public class SeriesRunner
 {
     public static void main(String args[])
     {
-        QueenOfTears series1=new QueenOfTears();
-        series1.entertainment();
+        Series series1=new QueenOfTears();
+        QueenOfTears season1=(QueenOfTears)series1;
+        season1.entertainment();
     }
 }

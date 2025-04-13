@@ -4,7 +4,8 @@ public class MilanaRunner
 {
     public static void main(String args[])
     {
-        Milana moviee=new Milana();
-        moviee.entertainment();
+        Movie moviee=new Milana();
+        Milana type=(Milana)moviee;
+        type.entertainment();
     }
 }

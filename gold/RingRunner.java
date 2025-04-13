@@ -4,7 +4,8 @@ public class RingRunner
 {
     public static void main(String args[])
     {
-        Ring name=new Ring();
+        Gold gold=new Ring();
+        Ring name=(Ring)gold;
         name.makeJewelry();
     }
 }

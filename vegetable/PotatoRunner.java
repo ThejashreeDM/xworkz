@@ -4,7 +4,8 @@ public class PotatoRunner
 {
     public static void main(String args[])
     {
-        Potato type1=new Potato();
+        Veagetable potato=new Potato();
+        Potato type1=(Potato)potato;
         type1.providesEnergy();
 
     }

@@ -3,7 +3,8 @@ package com.xworkz.inheritancemodule.software;
 public class JDKRunner
 {
     public static void main(String[] args) {
-        JDK software=new JDK();
-        software.provideService();
+        Software software=new JDK();
+        JDK isSoftware=(JDK)software;
+        isSoftware.provideService();
     }
 }

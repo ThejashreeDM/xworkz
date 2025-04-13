@@ -4,7 +4,8 @@ public class BusRunner
 {
     public static void main(String args[])
     {
-        Bus ksrtc=new Bus();
+        Vehicle bus=new Bus();
+        Bus ksrtc=(Bus)bus;
         ksrtc.transport();
     }
 }

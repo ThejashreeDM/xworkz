@@ -4,7 +4,8 @@ public class BowlRuner
 {
     public static void main(String args[])
    {
-         Bowl type1=new Bowl();
+         Utensil bowl=new Bowl();
+         Bowl type1=(Bowl)bowl;
          type1.store();
    }
 }

@@ -2,7 +2,8 @@ package com.xworkz.inheritancemodule.website;
 
 public class XworkzdotinRunner {
     public static void main(String[] args) {
-        Xworkzdotin website=new Xworkzdotin();
-        website.provideInfo();
+        Website website=new Xworkzdotin();
+        Xworkzdotin xworkx=(Xworkzdotin)website;
+        xworkx.provideInfo();
     }
 }

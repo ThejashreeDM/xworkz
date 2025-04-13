@@ -3,7 +3,8 @@ package com.xworkz.inheritancemodule.vcs;
 public class GitRunner
 {
     public static void main(String[] args) {
-        Git name=new Git();
+        VCS name=new Git();
+        Git git=(Git)name;
         name.maintainProjects();
     }
 }

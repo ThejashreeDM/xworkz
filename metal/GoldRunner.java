@@ -4,7 +4,8 @@ public class GoldRunner
 {
     public static void main(String args[])
     {
-        Gold type1=new Gold();
+        Metal gold=new Gold();
+        Gold type1=(Gold)gold;
         type1.ornaments();
     }
 }

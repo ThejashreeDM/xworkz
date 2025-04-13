@@ -4,7 +4,8 @@ public class SofaRunner
 {
     public static void main(String args[])
     {
-        Sofa type1=new Sofa();
+        Furniture furniture=new Sofa();
+        Sofa type1=(Sofa)furniture;
         type1.homeDecoration();
     }
 }
