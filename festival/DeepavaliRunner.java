@@ -3,8 +3,23 @@ package com.xworkz.inheritancemodule.festival;
 public class DeepavaliRunner
 {
     public static void main(String[] args) {
-        Festival fest=new Deepavali();
-        Deepavali type=(Deepavali)fest;
-        type.celebrate();
+        Festival festival = new Festival();
+        Festival deepavaliFestival = new Deepavali();
+        Deepavali deepavali = new Deepavali();
+        festival.celebrate();
+        festival.inviteFamily();
+        festival.decorate();
+        festival.exchangeGifts();
+        festival.prepareFood();
+        deepavaliFestival.celebrate();
+        deepavaliFestival.inviteFamily();
+        deepavaliFestival.decorate();
+        deepavaliFestival.exchangeGifts();
+        deepavaliFestival.prepareFood();
+        deepavali.decorateWithRangoli();
+        deepavali.burstCrackers();
+        deepavali.lightDiyas();
+        deepavali.wearNewClothes();
+        deepavali.worshipGoddessLakshmi();
     }
 }

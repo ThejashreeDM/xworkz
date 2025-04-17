@@ -4,8 +4,23 @@ public class GoldRunner
 {
     public static void main(String args[])
     {
-        Metal gold=new Gold();
-        Gold type1=(Gold)gold;
-        type1.ornaments();
+        Metal metal = new Metal();
+        Metal goldMetal = new Gold();
+        Gold gold = new Gold();
+        metal.alloy();
+        metal.shape();
+        metal.ornaments();
+        metal.melt();
+        metal.mine();
+        goldMetal.alloy();
+        goldMetal.shape();
+        goldMetal.ornaments();
+        goldMetal.melt();
+        goldMetal.mine();
+        gold.purifyGold();
+        gold.castGold();
+        gold.extractGold();
+        gold.determinePurity();
+        gold.polishGold();
     }
 }
