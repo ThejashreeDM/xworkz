@@ -1,0 +1,32 @@
+package com.xworkz.olafoods;
+import com.xworkz.olafoods.userdata.OlaFoodsUserDto;
+import com.xworkz.olafoods.signup.OlaFoods;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@NoArgsConstructor
+public class OlaFoodsRunner
+{
+
+        public static void main(String[] args) {
+            OlaFoodsUserDto user1 = new OlaFoodsUserDto();
+            user1.setEmail("foodlover@olafoods.com");
+            user1.setPhoneNumber("9123456780");
+            user1.setPassword("OlaEats@2024");
+            user1.setFullName("Deepa M");
+            user1.setDeliveryArea("Whitefield, Bangalore");
+
+            OlaFoods olaFoods = new OlaFoods();
+            if (olaFoods.userSignUp(user1)) {
+                System.out.println("OlaFoods Registration Successful!");
+            } else {
+                System.out.println("OlaFoods Registration Failed!");
+            }
+            System.out.println(user1);
+        }
+    }
+
+
