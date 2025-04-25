@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import com.xworkz.myntraapp.constants.Gender;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -23,5 +25,19 @@ public class MyntraDto {
      return "MyntraDto{\nPhonrNumber : "+phoneNumber+"\nFull Name : "+fullName+"\nEmail Id : "+emailId+"\nGender : "+gender+"\n DOB : "+dob+"Location : "+location+"}";
 
     }
+ public boolean equals(Object obj) {
+  if (obj instanceof MyntraDto) {
+   MyntraDto child = (MyntraDto) obj;
+   if (this.hashCode() == child.hashCode()) {
+    return true;
+   }
+  }
+  return false;
 
+ }
+
+ @Override
+ public int hashCode() {
+  return Objects.hash(phoneNumber, fullName, emailId, gender, dob, location);
+ }
 }

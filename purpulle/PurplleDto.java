@@ -1,8 +1,11 @@
 package com.xworkz.tostring.purpulle;
 
+
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -19,5 +22,21 @@ public class PurplleDto
     @Override
     public String toString() {
         return "PurplleDto{\n" +"Id : " + purplleId + "\nUser Name : " + userName + "\nEmail : " + email + "\nPassword : " + password + "\nConfirm Password : " + confirmPassword + "\nContact Number : " + contactNumber + "}";
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof PurplleDto) {
+            PurplleDto child = (PurplleDto) obj;
+            if (this.hashCode() == child.hashCode()) {
+                return true;
+            }
+        }
+        return false;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(purplleId, userName, email, password, confirmPassword, contactNumber);
     }
 }

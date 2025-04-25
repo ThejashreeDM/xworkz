@@ -1,8 +1,11 @@
 package com.xworkz.ajioapp.userdata;
 
+import com.xworkz.ajioapp.signup.Ajio;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -22,7 +25,21 @@ public class AjioUserDto
 
         }
 
+        public boolean equals(Object obj) {
+                if (obj instanceof AjioUserDto) {
+                        AjioUserDto child = (AjioUserDto) obj;
+                        if (this.hashCode() == child.hashCode()) {
+                                return true;
+                        }
+                }
+                return false;
 
-    }
+        }
+
+        @Override
+        public int hashCode() {
+                return Objects.hash(email, mobileNumber, password, fullName, gender);
+        }
+}
 
 

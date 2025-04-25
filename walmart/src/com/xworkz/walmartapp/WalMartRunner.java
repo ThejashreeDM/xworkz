@@ -14,6 +14,20 @@ public class WalMartRunner {
         walMartDto.setPhoneNumber("098765434");
         walMartDto.setPassWord("gfwq^*590");
 
+        WalMartDto walMartDto1 = new WalMartDto();
+        walMartDto1.setEmailId("theju11304@gmail.com");
+        walMartDto1.setFirstName("Thejashree");
+        walMartDto1.setLastName("D M");
+        walMartDto1.setPhoneNumber("098765434");
+        walMartDto1.setPassWord("gfwq^*590");
+
+        WalMartDto walMartDto2 = new WalMartDto();
+        walMartDto2.setEmailId("theju11304@gmail.com");
+        walMartDto2.setFirstName("Thejashree");
+        walMartDto2.setLastName("D M");
+        walMartDto2.setPhoneNumber("098765434");
+        walMartDto2.setPassWord("gfwq^*590");
+
         UserLogIn userLogIn = new UserLogIn();
         boolean ref = userLogIn.customerProfileValidation( walMartDto);
 
@@ -24,6 +38,8 @@ public class WalMartRunner {
             System.out.println("login unsuccessful");
         }
         System.out.println(walMartDto);
+        System.out.println(walMartDto.equals(walMartDto1));
+        System.out.println(walMartDto1.equals(walMartDto2));
 
     }
 }

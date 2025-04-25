@@ -17,7 +17,27 @@ public class FyndDto
     private long contactNumber;
 
     @Override
-    public String toString() {
-        return "FyndDto{\n" + "Id : " + fyndId + "\nUser Name : " + userName + "\nEmail : " + email + "\nPassword : " + password + "\nConfirm Password : " + confirmPassword + "\nContact Number : " + contactNumber + "}";
+  public String toString() {
+      return "FyndDto{\n" + "Id : " + fyndId + "\nUser Name : " + userName + "\nEmail : " + email + "\nPassword : " + password + "\nConfirm Password : " + confirmPassword + "\nContact Number : " + contactNumber + "}";
+   }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if(obj instanceof FyndDto)
+        {
+            FyndDto child=(FyndDto) obj;
+            if(this.hashCode() == child.hashCode())
+            {
+                return true;
+            }
+        }
+        return false;
+
     }
 }

@@ -22,6 +22,36 @@ public class PassportRunner
         user1.setHintAns("Pink");
         user1.setCaptcha("DNBGC123");
 
+        PassportDto user2=new PassportDto();
+        user2.setCpvLocation(CpvLocation.PASSPORT_OFFICE);
+        user2.setDcdrLocation(Location.BANGLORE);
+        user2.setGivenName("Baba");
+        user2.setSurName("Ram Dev");
+        user2.setDob("12-12-1890");
+        user2.setEmail("baba@gmail.com");
+        user2.setEmailLoginSame(true);
+        user2.setLoginId("baba@gmail.com");
+        user2.setPassword("baba@123");
+        user2.setConfirmPassword("baba@123");
+        user2.setHintQues("Your favorite color");
+        user2.setHintAns("Pink");
+        user2.setCaptcha("DNBGC123");
+
+        PassportDto user3=new PassportDto();
+        user3.setCpvLocation(CpvLocation.PASSPORT_OFFICE);
+        user3.setDcdrLocation(Location.BANGLORE);
+        user3.setGivenName("Babu");
+        user3.setSurName("Ram ");
+        user3.setDob("11-11-1895");
+        user3.setEmail("babu@gmail.com");
+        user3.setEmailLoginSame(true);
+        user3.setLoginId("babu@gmail.com");
+        user3.setPassword("babu@123");
+        user3.setConfirmPassword("babu@123");
+        user3.setHintQues("Your favorite color");
+        user3.setHintAns("Red");
+        user3.setCaptcha("ABCDE678");
+
         Passport validateUser1=new Passport();
        if(validateUser1.validateUser(user1))
            System.out.println("User Registration Successfull");
@@ -29,6 +59,8 @@ public class PassportRunner
            System.out.println("User Registration Unsuccessfull");
 
         System.out.println(user1);
+        System.out.println(user1.equals(user2));
+        System.out.println(user2.equals(user3));
 
 
 

@@ -1,8 +1,11 @@
 package com.xworkz.tostring.craftsvilla;
 
+import com.xworkz.tostring.bigbasket.BigBasketDto;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.Objects;
 
 @Getter
 @Setter
@@ -21,4 +24,21 @@ public class CraftsVillaDto
         public String toString() {
             return "CraftsVillaDto{\n" + "Id : " + craftsVillaId + "\nUser Name : " + userName + "\nEmail : " + email + "\nPassword : " + password + "\nConfirm Password : " + confirmPassword + "\nContact Number : " + contactNumber + "}";
         }
+
+        @Override
+        public boolean equals(Object obj)
+        {
+                if(obj instanceof CraftsVillaDto) {
+                        CraftsVillaDto craftsVilla = (CraftsVillaDto) obj;
+                        if (this.craftsVillaId == craftsVilla.craftsVillaId && this.userName == craftsVilla.userName && this.email == craftsVilla.email && this.password == craftsVilla.password && this.confirmPassword == craftsVilla.confirmPassword && this.contactNumber == craftsVilla.contactNumber)
+                                return true;
+                }
+                return  false;
+        }
+
+        @Override
+        public int hashCode() {
+                return Objects.hash(craftsVillaId, userName, email, password, confirmPassword, contactNumber);
+        }
 }
+

@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -32,6 +34,19 @@ public class PassportDto
 
     }
 
+    public boolean equals(Object obj) {
+        if (obj instanceof PassportDto) {
+            PassportDto child = (PassportDto) obj;
+            if (this.hashCode() == child.hashCode()) {
+                return true;
+            }
+        }
+        return false;
 
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(cpvLocation, dcdrLocation, givenName, surName, dob, email, isEmailLoginSame, loginId, password, confirmPassword, hintQues, hintAns, captcha);
+    }
 }

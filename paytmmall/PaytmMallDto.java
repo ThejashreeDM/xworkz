@@ -4,6 +4,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,5 +22,20 @@ public class PaytmMallDto
     public String toString() {
         return "PaytmMallDto{\n" + "Id : " + paytmMallId + "\nUser Name : " + userName + "\nEmail : " + email + "\nPassword : " + password + "\nConfirm Password : " + confirmPassword + "\nContact Number : " + contactNumber + "}";
     }
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof PaytmMallDto) {
+            PaytmMallDto child = (PaytmMallDto) obj;
+            if (this.hashCode() == child.hashCode()) {
+                return true;
+            }
+        }
+        return false;
 
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(paytmMallId, userName, email, password, confirmPassword, contactNumber);
+    }
 }
